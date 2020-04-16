@@ -1,5 +1,5 @@
 <h1 align="center">PowerDock</h1>
-<img src="image/PowerDock.png">
+<img src="img/PowerDock.png">
 
 **Choose a power option.**
 
