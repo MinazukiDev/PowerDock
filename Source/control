@@ -1,0 +1,10 @@
+Package: com.minazuki.powerdock
+Name: PowerDock
+Depends: mobilesubstrate, preferenceloader, com.mikiyan1978.libpowercontroller
+Version: 0.0.1-beta
+Architecture: iphoneos-arm
+Description: Choose a power option.
+Depiction: https://minazukidev.github.io/html/PowerDock/index.html
+Maintainer: Minazuki <minazukidev@gmail.com>
+Author: Minazuki <minazukidev@gmail.com>
+Section: Tweaks
