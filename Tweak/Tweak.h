@@ -3,6 +3,7 @@
 
 #define PLIST_PATH @"/var/mobile/Library/Preferences/com.minazuki.powerdock.plist"
 
+#import "libcolorpicker.h"
 #include <libpowercontroller/powercontroller.h>
 
 static UIWindow *dockButton = nil;

@@ -94,9 +94,60 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
+			<string>FONT SIZE</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<integer>24</integer>
+			<key>defaults</key>
+			<string>com.minazuki.powerdock</string>
+			<key>isSegmented</key>
+			<false/>
+			<key>key</key>
+			<string>fontSize</string>
+			<key>max</key>
+			<integer>30</integer>
+			<key>min</key>
+			<integer>1</integer>
+			<key>showValue</key>
+			<true/>
+			<key>PostNotification</key>
+			<string>com.minazuki.powerdock/reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>TITLE ALPHA</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<integer>1</integer>
+			<key>defaults</key>
+			<string>com.minazuki.powerdock</string>
+			<key>isSegmented</key>
+			<false/>
+			<key>key</key>
+			<string>titleAlpha</string>
+			<key>max</key>
+			<integer>1</integer>
+			<key>min</key>
+			<integer>0</integer>
+			<key>showValue</key>
+			<true/>
+			<key>PostNotification</key>
+			<string>com.minazuki.powerdock/reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
 			<string></string>
 		</dict>
-
 		<dict>
 			<key>action</key>
 			<string>myInfo</string>
