@@ -35,7 +35,6 @@ Twitter         - [@Minazuki_dev](https://twitter.com/Minazuki_dev)
 
 ## 実装予定
 - アラートのタイプを変更
-- PowerDockの画像 (PreferenceBundle)
 - ボタン自体の大きさオプション
 - その他…
 

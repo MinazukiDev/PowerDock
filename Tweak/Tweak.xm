@@ -19,7 +19,6 @@ static float titleAlpha;
 static int fontSize;
 static int powerOption = 1;
 
-
 static void loadPrefs()
 {
 
@@ -56,6 +55,9 @@ void updateSettings(CFNotificationCenterRef center,
             dockButton.hidden = NO;
             dockButton.layer.masksToBounds = YES;
             dockButton.layer.cornerRadius = cornerRadius;
+            dockButton.windowLevel = UIWindowLevelNormal;
+            self.view.multipleTouchEnabled = false;
+            [self.view addSubview:dockButton];
 
             // Dockのブラー
             UIBlurEffect *dockBlur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
@@ -68,10 +70,12 @@ void updateSettings(CFNotificationCenterRef center,
             respButton.frame = CGRectMake(56, 10, 135, 35);
             respButton.hidden = NO;
             [respButton setTitle:@"PowerDock" forState:UIControlStateNormal];
-            [respButton addTarget:self action:@selector(powerDock)  forControlEvents:UIControlEventTouchUpInside];
+            [respButton addTarget:self action:@selector(powerDock:)  forControlEvents:UIControlEventTouchUpInside];
             respButton.tintColor = [UIColor whiteColor];
+
             [respButton.titleLabel setFont:[UIFont systemFontOfSize:24]];
             respButton.alpha = 0.7;
+            
             [dockButton addSubview:respButton];
 
         } else {
@@ -81,8 +85,9 @@ void updateSettings(CFNotificationCenterRef center,
 }
 
 %new
-- (void)powerDock
+- (void)powerDock:(UIButton *)hoge
 {
+    
     UIViewController *view = [UIApplication sharedApplication].keyWindow.rootViewController;
         while (view.presentedViewController != nil && !view.presentedViewController.isBeingDismissed) {
                 view = view.presentedViewController;
@@ -203,7 +208,7 @@ void updateSettings(CFNotificationCenterRef center,
 
     SpringBoard *springBoard = (SpringBoard *)[UIApplication sharedApplication];
     NSArray *applist = [springBoard _accessibilityRunningApplications];
-    NSString *strrz = [applist componentsJoinedByString:@""];
+    NSString *strrz = [applist componentsJoinedByString:@"\n\n"];
     proc = @"Kill ";
     proc2 = @" Process";
     NSInteger con = applist.count;
@@ -219,6 +224,7 @@ void updateSettings(CFNotificationCenterRef center,
     [alertController addAction:[UIAlertAction actionWithTitle:proc3
             style:UIAlertActionStyleDefault 
             handler:^(UIAlertAction *action) {
+
                 UIAlertController *alertController = 
                 [UIAlertController alertControllerWithTitle:@"PowerDock"
                     message:proc4
@@ -259,7 +265,9 @@ range = [strrz rangeOfString:abccc];
                     [alertController addAction:[UIAlertAction actionWithTitle:@"View Process"
                        style:UIAlertActionStyleDefault 
                        handler:^(UIAlertAction *action) {
-
+                           //hoge.enabled = !(hoge.enabled);
+                            dockButton.hidden = YES;
+                            hoge.enabled = false;
                             UIAlertController *alertController = 
                             [UIAlertController alertControllerWithTitle:@"Process List"
                             message:strrz 
@@ -268,7 +276,8 @@ range = [strrz rangeOfString:abccc];
                             [alertController addAction:[UIAlertAction actionWithTitle:@"OK" 
                                 style:UIAlertActionStyleDefault 
                                 handler:^(UIAlertAction *action) {
-
+                                    hoge.enabled = YES;
+                                    dockButton.hidden =NO;
                             }]]; // End View Process
 
                             // View Process > Kill Process
@@ -276,6 +285,8 @@ range = [strrz rangeOfString:abccc];
                                 style:UIAlertActionStyleDestructive
                                 handler:^(UIAlertAction *action) {
                                     for(int k=1000;k<100000;k++) {//pidsearch
+                                        hoge.enabled = YES;
+                                        dockButton.hidden =NO;
                                         kill2 = @"kill ";
                                         abcc = k;
                                         num1cc = [NSNumber numberWithInteger:abcc];
