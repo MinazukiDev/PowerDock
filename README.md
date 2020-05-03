@@ -21,9 +21,9 @@ Twitter         - [@Minazuki_dev](https://twitter.com/Minazuki_dev)
 
 ## 機能
 - Respring
-- Reboot (未検証 2020/4/16)
+- Reboot
 - Safe mode
-- Power down (未検証 2020/4/16)
+- Power down
 - UICache (Beta)
 - Kill All Apps
 - Kill Process
@@ -33,18 +33,12 @@ Twitter         - [@Minazuki_dev](https://twitter.com/Minazuki_dev)
 - 文字の大きさ変更
 - 文字の透明度変更
 
-## 実装予定
-- アラートのタイプを変更
-- ボタン自体の大きさオプション
-- その他…
-
 ## 確認済みバグ
-- Respring後にすぐタップするとアラートが消える
-- アプリを閉じですぐにタップするとアラートが消える
 - Height, Radius,が2回Respringしないと反映されない
 
 ## 修正済みバグ
-皆様の報告により修正が完了次第記述します。
+- Respring後にすぐタップするとアラートが消える
+- アプリを閉じですぐにタップするとアラートが消える
 
 ## SB系の共存できたTweak
 - HomePlus Beta
@@ -54,6 +48,7 @@ Twitter         - [@Minazuki_dev](https://twitter.com/Minazuki_dev)
 
 ## Special thanks
 SsS136        - [@DevTweak](https://twitter.com/DevTweak)
+Dcsyhi        - [@linux_n1](https://twitter.com/linux_n1)
 
 ## Copyright
 @Minazuki_dev 2020
