@@ -7,7 +7,7 @@ Twitter         - [@Minazuki_dev](https://twitter.com/Minazuki_dev)
 
 
 ## PowerDock
-ネタTweakとして最初は作り始めたのですが、テスターの方達に便利と言われたのでちょっと頑張って機能を増やしました。半日でなんとかbeta版としてリリースすることができました。なので僕が把握しているバグ、把握していないバグがあると思います。ここに書き記しておくのでTwitterやLINEのオープンチャットで教えてくれるとありがたいです。動作報告やバグ報告と同時にどのSpringBoard系のTweakと共存できたのかも教えてほしいです。
+ネタTweakとして最初は作り始めたのですが、テスターの方達に便利と言われたのでちょっと頑張って機能を増やしました。バグはTwitterやLINEのオープンチャットで教えてくれるとありがたいです。動作報告やバグ報告と同時にどのSpringBoard系のTweakと共存できたのかも教えてほしいです。
 
 使用する前に以下のリポジトリを追加してください。
 - https://mikiyan1978.github.io/repository/
@@ -15,7 +15,7 @@ Twitter         - [@Minazuki_dev](https://twitter.com/Minazuki_dev)
 
 ## Compatibility
 
-- iOS 12~13.3
+- iOS 13~13.3 (iOS12はKill All Appsが動きません)
 - arm64 & arm64e
 [アーキテクチャ確認はここから](https://qiita.com/takkyun/items/814aa45beee422a5f0c6)
 
@@ -47,8 +47,8 @@ Twitter         - [@Minazuki_dev](https://twitter.com/Minazuki_dev)
 - FloatingDockPlus13
 
 ## Special thanks
-SsS136        - [@DevTweak](https://twitter.com/DevTweak)
-Dcsyhi        - [@linux_n1](https://twitter.com/linux_n1)
+-SsS136        - [@DevTweak](https://twitter.com/DevTweak)
+-Dcsyhi        - [@linux_n1](https://twitter.com/linux_n1)
 
 ## Copyright
 @Minazuki_dev 2020

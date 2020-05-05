@@ -123,6 +123,8 @@ void updateSettings(CFNotificationCenterRef center,void *observer,CFStringRef na
    }else if([buttonTitle isEqualToString:@"Power down"]){
         RP_Act = buttonTitle;
         [self Yes_Or_No_Alert:buttonTitle B_Name:@"Yes" B_Name2:@"No"];
+   }else if([buttonTitle isEqualToString:@"LDRestart"]){
+        notify_post("com.libpowercontroller.libpowercontrollerldrestart");
    }else if([buttonTitle isEqualToString:@"Kill All Apps"]){
         SBMainSwitcherViewController *mainSwitcher = [%c(SBMainSwitcherViewController) sharedInstance];
         NSArray *items = [mainSwitcher recentAppLayouts];
@@ -167,7 +169,7 @@ void updateSettings(CFNotificationCenterRef center,void *observer,CFStringRef na
 
     P_Title = [NSString stringWithFormat:@"Kill %@ Process",P_Cnt];
 
-	NSArray *Actions = @[@"Respring",@"Reboot",@"SafeMode",@"Power down",@"UICache",@"Kill All Apps",P_Title];
+	NSArray *Actions = @[@"Respring",@"Reboot",@"SafeMode",@"Power down",@"UICache",@"LDRestart",@"Kill All Apps",P_Title];
     
     UIAlertView *alert = [[UIAlertView alloc] init];
     alert.delegate = self;
